@@ -35,7 +35,7 @@ const MovieDetailsComponent = () => {
 
                 <div className='grid grid-cols-3 gap-10'>
                     {similarMovies?.slice(1).map((movie, i) => (
-                        <MovieCard movie={movie} />
+                        <MovieCard movie={movie} key={i}/>
                     ))}
                 </div>
 

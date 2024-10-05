@@ -1,10 +1,6 @@
 // src/redux/slices/movieSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { axiosConfig } from '../utils/requests';
-
-const API_KEY = "2ea7b05c01d6fc7bf96d7db90b11538e";
-const BASE_URL = 'https://api.themoviedb.org/3';
 
 // Types
 interface Movie {
@@ -44,7 +40,6 @@ export const fetchMovies = createAsyncThunk(
         pageRequests.push(
           axiosConfig.get(`/discover/movie`, {
             params: {
-              api_key: API_KEY,
               page: page,
             },
           })

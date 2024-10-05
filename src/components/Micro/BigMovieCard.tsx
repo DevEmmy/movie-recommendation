@@ -1,4 +1,3 @@
-import React from 'react'
 import useGenres from '../hooks/useGenres'
 import Button from './Button'
 import { RiThumbUpFill } from 'react-icons/ri'

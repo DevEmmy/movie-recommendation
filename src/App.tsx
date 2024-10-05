@@ -4,12 +4,12 @@ import Onboarding from './components/Pages/Onboarding'
 import { AppDispatch, RootState } from './stores/movieStore';
 import { useEffect } from 'react';
 import { fetchMovies } from './features/movieSlice';
-import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MovieDetailsComponent from './components/Pages/MovieDetails';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
-  const { movies, status, genres, error } = useSelector((state: RootState) => state.movies);
+  const {  genres } = useSelector((state: RootState) => state.movies);
 
   useEffect(() => {
     if (genres.length > 0) {

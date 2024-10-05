@@ -4,7 +4,7 @@ import { setGenres } from '../../features/movieSlice';
 import { useDispatch } from 'react-redux';
 
 const Onboarding: React.FC = () => {
-  const { allGenres, loading } = useGenres();
+  const { allGenres } = useGenres();
   const [selected, setSelected] = useState<number[]>([]);
   const dispatch = useDispatch();
 

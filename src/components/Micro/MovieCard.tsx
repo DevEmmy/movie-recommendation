@@ -1,8 +1,11 @@
-import React from 'react'
 import useGenres from '../hooks/useGenres'
 import Button from './Button';
+import { Movie } from '../Interfaces/MovieInterface';
 
-const MovieCard = ({movie}) => {
+interface Props{
+  movie: Movie
+}
+const MovieCard = ({movie }: Props) => {
   const {extractName} = useGenres();
   return (
     <div
@@ -19,9 +22,9 @@ const MovieCard = ({movie}) => {
       <div className='absolute bottom-0  p-5 z-[20] text-white w-full'>
         <div className='flex items-center gap-3'>
           {
-            movie.genre_ids.map((id: string, i: number) => {
+            movie.genre_ids?.map((id: number, i: number) => {
               return (
-                <p className='search-glass w-fit rounded-full p-2 px-2 text-xs' key={i}>{extractName(id)}</p>
+                <p key={i} className='search-glass w-fit rounded-full p-2 px-2 text-xs' >{extractName(id)}</p>
               )
             })
           }

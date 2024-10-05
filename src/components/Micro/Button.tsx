@@ -4,7 +4,7 @@ import React from 'react';
 // Define the props type for the Button component
 interface ButtonProps {
   children: React.ReactNode;
-  id?: string; // id is optional and can be a string
+  id?: number; // id is optional and can be a string
 }
 
 const Button: React.FC<ButtonProps> = ({ children, id }) => {

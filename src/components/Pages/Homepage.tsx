@@ -1,6 +1,5 @@
-import React from 'react';
+
 import { RiSearch2Line } from 'react-icons/ri';
-import Button from '../Micro/Button';
 import { RootState } from '../../stores/movieStore';
 import { useSelector } from 'react-redux';
 import useGenres from '../hooks/useGenres';

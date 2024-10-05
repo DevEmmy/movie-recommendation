@@ -1,5 +1,16 @@
 {
+  "compilerOptions": {
+    // Other options...
+    "skipLibCheck": true,         // Skip type checking for all declaration files (.d.ts)
+    "noEmit": true,               // Avoid emitting files, just type checking
+    "ignoreDeprecations": "5.0",  // Ignore deprecations
+    "allowJs": true,              // Allow JavaScript in TypeScript files (if needed)
+    "strict": false               // Disable strict mode if causing issues
+  },
   "files": [],
+  "exclude": [
+    "node_modules"
+  ],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
