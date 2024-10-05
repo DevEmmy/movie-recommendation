@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Afacad Flux", sans-serif;
+}
+
+body{
+ 
+}
+
+.main {
+
+  background-color: black;
+  background-clip: border-box;
+  background-attachment: fixed;
+  backdrop-filter: blur(20px); /* Adjusted blur for clarity */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+
+}
+
+
+img{
+  object-fit: cover;
+  @apply shadow-2xl
+}
+
+.search-glass {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Stronger blur for glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.overlay{
+  background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.9));
+  @apply absolute w-full h-full bottom-0 left-0 right-0 rounded-[36px]
+}
+
+button{
+  @apply bg-white rounded-full px-6 py-3 text-black font-bold font-[20px] cursor-pointer
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,white 4%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,white );
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
